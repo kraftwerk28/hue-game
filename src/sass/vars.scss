@@ -1,0 +1,51 @@
+$page-back-color: #333;
+
+$shadow-color: #fff;
+$breath-scale: 1.2;
+
+$border-radius: 5px;
+
+$shadow-darkness: 10;
+
+// 3d button
+$btn-padding: 10px;
+$btn-margin: 5px;
+
+$btn-blue: rgb(0, 128, 255);
+$btn-green: rgb(0, 200, 0);
+$btn-red: rgb(255, 50, 50);
+$btn-purple: purple;
+
+$btn-fore-color: rgb(255, 255, 255);
+$btn-3d-height: 5px;
+$btn-border-radius: 5px;
+
+$colors: ("blue": $btn-blue, "green": $btn-green, "red": $btn-red, "purple": $btn-purple);
+
+// input
+$input-back-color: rgb(255, 128, 0);
+
+// modal
+$modal-root-color: rgba(0, 0, 0, 0.6);
+$modal-back-color: #ddd;
+$modal-border-radius: 10px;
+$modal-3d-height: 10px;
+
+// font
+$main-font-size: medium;
+
+@mixin firamono {
+  font-family: 'Fira Mono', monospace;
+}
+
+@mixin fill {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+@mixin flex {
+  display: flex;
+  display: -webkit-flex;
+}

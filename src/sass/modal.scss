@@ -1,0 +1,192 @@
+@import "./vars";
+
+.modal-root {
+  @include flex;
+  @include fill;
+
+  position: fixed;
+  background: $modal-root-color;
+  align-items: center;
+  justify-content: center;
+
+  > .modal {
+    @include flex;
+
+    max-width: 800px;
+    padding: 20px;
+    flex: 1;
+    flex-flow: column nowrap;
+    height: 80%;
+    width: 80%;
+    background: $modal-back-color;
+    border-radius: $modal-border-radius;
+    box-shadow: 0px $modal-3d-height darken($modal-back-color, $shadow-darkness);
+
+    > header {
+      flex-flow: row nowrap;
+
+      > span {
+        @include firamono;
+
+        font-size: xx-large;
+        font-weight: bolder;
+
+        $blur: 3px;
+
+        &:nth-child(1) {
+          animation: r 10s ease-in-out infinite;
+
+          @keyframes r {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            10% {
+              transform: rotate(360deg);
+            }
+
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+        }
+
+        &:nth-child(3n) {
+          color: red;
+          text-shadow: 0px 0px $blur red;
+        }
+
+        &:nth-child(3n + 1) {
+          color: green;
+          text-shadow: 0px 0px $blur green;
+        }
+
+        &:nth-child(3n + 2) {
+          color: mediumblue;
+          text-shadow: 0px 0px $blur mediumblue;
+        }
+
+        letter-spacing: 3px;
+      }
+
+      @include flex;
+
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    > div {
+      @include flex;
+
+      // background: rgba(0, 0, 0, 0.2);
+      flex-flow: column nowrap;
+      flex: 9;
+
+      > div {
+        flex-flow: column wrap;
+      }
+
+      > div:nth-child(1) {
+        @include flex;
+
+        border-bottom: 1px solid black;
+        padding-bottom: 20px;
+
+        > div:nth-child(2) {
+          @include flex;
+
+          flex-flow: row wrap;
+
+          > input {
+            flex: 3;
+          }
+
+          > button {
+            flex: 1;
+          }
+        }
+      }
+
+      > div:nth-child(2) {
+        justify-items: center;
+
+        // game settings
+        > div:nth-child(2) {
+          @include flex;
+
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: space-around;
+        }
+      }
+    }
+
+    > footer {
+      @include flex;
+
+      // align-content: center;
+      justify-content: center;
+      flex: 2;
+
+      > button {
+        align-self: center;
+      }
+    }
+
+    .modal-subheader {
+      @include firamono;
+
+      text-align: center;
+      font-size: $main-font-size;
+
+      // align-self: center;
+   
+    }
+  }
+}
+
+// animation
+$modal-anim-duration: 0.5s;
+$transition-div: transform $modal-anim-duration;
+
+.modal-anim-enter-active, .modal-anim-leave-active {
+  transition: opacity $modal-anim-duration;
+
+  > div {
+    transition: transform $modal-anim-duration;
+  }
+}
+
+.modal-anim-enter, .modal-anim-leave-to {
+  opacity: 0;
+
+  > div {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes showhide {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes _hide {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
+}
