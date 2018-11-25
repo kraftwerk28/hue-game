@@ -3,7 +3,7 @@ import MainController from './components/MainController.vue';
 import 'babel-polyfill';
 
 (async () => {
-  const translation = await fetch('../src/translations/translation-en.json')
+  const translation = await fetch('../translations/translation-en.json')
     .then(d => d.json());
   window.vm = new Vue({
     el: '#app',
