@@ -14,16 +14,20 @@ $btn-margin: 5px;
 $btn-blue: rgb(0, 128, 255);
 $btn-green: rgb(0, 200, 0);
 $btn-red: rgb(255, 50, 50);
+$btn-orange: rgb(255, 128, 0);
 $btn-purple: purple;
 
 $btn-fore-color: rgb(255, 255, 255);
 $btn-3d-height: 5px;
 $btn-border-radius: 5px;
 
-$colors: ("blue": $btn-blue, "green": $btn-green, "red": $btn-red, "purple": $btn-purple);
+$colors: ("blue": $btn-blue, "green": $btn-green, "red": $btn-red, "purple": $btn-purple, "orange": $btn-orange);
 
 // input
 $input-back-color: rgb(255, 128, 0);
+
+// range input
+$range-margin: 15px;
 
 // modal
 $modal-root-color: rgba(0, 0, 0, 0.6);
@@ -33,6 +37,11 @@ $modal-3d-height: 10px;
 
 // font
 $main-font-size: medium;
+
+// z-indexes
+$z-index-main: 1;
+$z-index-secondary: 3;
+$z-index-modal: 5;
 
 @mixin firamono {
   font-family: 'Fira Mono', monospace;
@@ -48,4 +57,15 @@ $main-font-size: medium;
 @mixin flex {
   display: flex;
   display: -webkit-flex;
+}
+
+@mixin grid {
+  display: grid;
+  display: -ms-grid;
+}
+
+@mixin reset {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

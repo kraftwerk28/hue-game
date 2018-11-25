@@ -1,0 +1,25 @@
+{
+  "mainMenu": {
+    "title": "Відтінок",
+    "usernameTitle": "Ім'я (необов'язково, потрібно лише для збереження досягнень)",
+    "usernamePlaceholder": "ім'я",
+    "usernameSubmit": "Підтвердити",
+    "createGameTitle": "Налаштування гри:",
+    "levelChoose": "Виберіть рівень складності:",
+    "easyLevel": "просто",
+    "mediumLevel": "середньо",
+    "hardLevel": "складно"
+  },
+  "grid": {
+    "exitDialogTitle": "Вийти?",
+    "exitDialogYes": "Так",
+    "exitDialogNo": "Ні"
+  },
+  "aboutModal": {
+    "title": "Про розробника",
+    "html": "Developer:\nVsevolod Ambros\n<a href=\"https://t.me/kraftwerk28\">@kraftwerk28</a>\n<a href=\"https://github.com/kraftwerk28\">github.com/kraftwerk28</a>\n\nSpecial thanks to:\nRuslan Gunawardana\n<a href=\"https://t.me/exarus\">@exarus</a>\n<a href=\"https://github.com/exarus\">github.com/exarus</a>"
+  },
+  "colorModal": {
+    "title": "Налаштування кольору:"
+  }
+}

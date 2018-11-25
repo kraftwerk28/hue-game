@@ -1,13 +1,15 @@
 'use strict';
 
+const webpack = require('webpack');
 const { VueLoaderPlugin } = require('vue-loader');
+const HWP = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/main.js',
   output: {
-    path: __dirname,
-    filename: 'game.js'
+    path: __dirname + '/dist/',
+    filename: 'game.js',
   },
   module: {
     rules: [
@@ -29,6 +31,17 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
-  ]
+    new VueLoaderPlugin(),
+    new HWP({
+      minify: true,
+      template: 'src/template.html'
+    }),
+  ],
+  devServer: {
+    compress: true,
+    host: '0.0.0.0',
+    overlay: true,
+    stats: 'minimal',
+    // lazy: true,
+  }
 }

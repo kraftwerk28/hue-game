@@ -1,22 +1,23 @@
 <template>
   <div id="root">
-    <div v-if="title.length" class="modal-subheader">{{ title }}</div>
+    <div v-if="title.length"
+      class="modal-subheader">{{ title }}</div>
     <div>
-      <input
-        size="2"
+      <input size="2"
         class="input-3d"
         type="text"
         :value="value"
         :max="max"
         :min="min"
         @change="change($event)"
-        @focus="focus($event)"
-      >
+        @focus="focus($event)">
       <div>
-        <button class="btn-3d tiny" @click="incr">
+        <button class="btn-3d tiny"
+          @click="incr">
           <span class="material-icons">exposure_plus_1</span>
         </button>
-        <button class="btn-3d tiny" @click="decr">
+        <button class="btn-3d tiny"
+          @click="decr">
           <span class="material-icons">exposure_neg_1</span>
         </button>
       </div>
@@ -71,7 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 #root {
-  @import "../sass/style.scss";
+  @import "../scss/style";
 
   @include flex;
   margin: $btn-margin;

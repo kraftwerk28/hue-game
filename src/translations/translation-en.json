@@ -1,0 +1,30 @@
+{
+  "mainMenu": {
+    "title": "Hue",
+    "usernameTitle": "Type your username here: (not required, just for saving your game progress)",
+    "usernamePlaceholder": "your username",
+    "usernameSubmit": "Submit",
+    "createGameTitle": "Config game:",
+    "levelChoose": "Choose a level:",
+    "easyLevel": "easy",
+    "mediumLevel": "medium",
+    "hardLevel": "hard",
+    "rowsLabel": "rows",
+    "columnsLabel": "columns",
+    "setColorsButton": "Set colors",
+    "creditsButton": "Credits",
+    "startButton": "Start"
+  },
+  "grid": {
+    "exitDialogTitle": "Exit?",
+    "exitDialogYes": "Yes",
+    "exitDialogNo": "No"
+  },
+  "aboutModal": {
+    "title": "About",
+    "html": "Developer:\nVsevolod Ambros\n<a href=\"https://t.me/kraftwerk28\">@kraftwerk28</a>\n<a href=\"https://github.com/kraftwerk28\">github.com/kraftwerk28</a>\n\nSpecial thanks to:\nRuslan Gunawardana\n<a href=\"https://t.me/exarus\">@exarus</a>\n<a href=\"https://github.com/exarus\">github.com/exarus</a>"
+  },
+  "colorModal": {
+    "title": "Color settings"
+  }
+}

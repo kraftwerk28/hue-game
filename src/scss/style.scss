@@ -1,0 +1,14 @@
+// @import "./vars";
+@import "./btn-input";
+@import "./modal";
+
+html,
+body {
+  background-color: $page-back-color;
+  height: 100%;
+  margin: 0px;
+}
+
+* {
+  @include firamono;
+}
