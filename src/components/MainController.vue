@@ -67,10 +67,10 @@ export default {
         return a;
       };
       const snds = [
-        _audio('../../res/calc1-press.mp3'),
-        _audio('../../res/calc2-press.mp3'),
-        _audio('../../res/calc1-unpress.mp3'),
-        _audio('../../res/calc2-unpress.mp3')
+        _audio('../../assets/calc1-press.mp3'),
+        _audio('../../assets/calc2-press.mp3'),
+        _audio('../../assets/calc1-unpress.mp3'),
+        _audio('../../assets/calc2-unpress.mp3')
       ];
 
 
